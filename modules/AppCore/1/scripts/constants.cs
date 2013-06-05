@@ -1,5 +1,5 @@
 //-----------------------------------------------------------------------------
-// Copyright (c) 2013 GarageGames, LLC	wiggle
+// Copyright (c) 2013 GarageGames, LLC
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to
@@ -20,32 +20,32 @@
 // IN THE SOFTWARE.
 //-----------------------------------------------------------------------------
 
-function AppCore::create( %this )
-{
-    // Load system scripts
-    exec("./scripts/constants.cs");
-    exec("./scripts/defaultPreferences.cs");
-    exec("./scripts/canvas.cs");
-    exec("./scripts/openal.cs");
-    
-    // Initialize the canvas
-    initializeCanvas("SRG: Alpha");
-    
-    // Set the canvas color
-    Canvas.BackgroundColor = "Violet";
-    Canvas.UseBackgroundColor = true;
-    
-    // Initialize audio
-    initializeOpenAL();
-    
-    ModuleDatabase.loadExplicit("Alpha");
-    //ModuleDatabase.loadExplicit("Sandbox");
-}
+$iOS::constant::iPhone = 0;
+$iOS::constant::iPad = 1;
+$iOS::constant::iPhone5 = 2;
 
-//-----------------------------------------------------------------------------
+$iOS::constant::Landscape = 0;
+$iOS::constant::Portrait = 1;
+$iOS::constant::ResolutionFull = 0;
+$iOS::constant::ResolutionSmall = 1;
 
-function AppCore::destroy( %this )
-{
+$iOS::constant::iPhoneWidth = 480;
+$iOS::constant::iPhoneHeight = 320;
 
-}
+$iOS::constant::iPhone4Width = 960;
+$iOS::constant::iPhone4Height = 640;
 
+$iOS::constant::iPadWidth = 1024;
+$iOS::constant::iPadHeight = 768;
+
+$iOS::constant::NewiPadWidth = 2048;
+$iOS::constant::NewiPadHeight = 1536;
+
+$iOS::constant::iPhone5Width = 1136;
+$iOS::constant::iPhone5Height = 640;
+
+$iOS::constant::OrientationUnknown = 0;
+$iOS::constant::OrientationLandscapeLeft = 1;
+$iOS::constant::OrientationLandscapeRight = 2;
+$iOS::constant::OrientationPortrait = 3;
+$iOS::constant::OrientationPortraitUpsideDown = 4;
