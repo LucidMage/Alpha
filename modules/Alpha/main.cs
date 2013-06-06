@@ -7,13 +7,22 @@ function Alpha::create( %this )
     exec("./scripts/scenewindow.cs");
     exec("./scripts/scene.cs");
     exec("./scripts/background.cs");
+    exec("./scripts/map.cs");
     exec("./scripts/player.cs");
+	
+	// Load and configure the console.  
+	echo("Start loading console");
+	exec("./scripts/console.cs");  
+	TamlRead("./gui/ConsoleDialog.gui.taml"); //Notice we are just reading in the Taml file, not adding it to the scene  
+	GlobalActionMap.bind( keyboard, "tilde", toggleConsole );
+	echo("End loading console");
 
     createSceneWindow();
     createScene();
 
     mySceneWindow.setScene(myScene);
     createBackground();
+    createMap();
     createPlayer();
 
     //  Debug
