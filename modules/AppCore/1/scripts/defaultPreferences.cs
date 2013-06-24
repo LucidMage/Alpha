@@ -21,8 +21,8 @@
 //-----------------------------------------------------------------------------
 
 /// Game
-$Game::CompanyName              = "GarageGames LLC";
-$Game::ProductName              = "Torque 2D";
+$Game::CompanyName              = "Family Planning";
+$Game::ProductName              = "Sexuality Road";
 
 /// iOS
 $pref::iOS::ScreenOrientation   = $iOS::constant::Landscape;

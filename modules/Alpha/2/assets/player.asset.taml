@@ -1,0 +1,8 @@
+<ImageAsset
+	AssetName="Player"
+	ImageFile="Skeleton.png"
+	CellCountX="32"
+	CellCountY="8"
+    CellWidth="128"
+    CellHeight="128"
+/>
