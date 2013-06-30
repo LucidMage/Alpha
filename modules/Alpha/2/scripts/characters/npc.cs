@@ -8,10 +8,10 @@ function createNPC(%position)
 
    //  Centre on screen
    %npc.position = %position;
-   %npc.size = "8 8";
+   //%npc.size = 1;
 
    //  On layer closest to camera
-   %npc.sceneLayer = 1;
+   %npc.sceneLayer = 14;
 
    //  Set animation
    //%npc.image = "ToyAssets:TD_DwarfImage";
@@ -19,8 +19,9 @@ function createNPC(%position)
    //%npc.animation = "ToyAssets:TD_DwarfWalkSouth";
    %npc.animation = %npc.imageName @ "South";
 
-   //  Collision Box, if size not set = size of image
-   %npc.createPolygonBoxCollisionShape();
+   //  Collision Circle, if size not set = size of image
+   // (radius, [relative xPos, relative yPos])
+   %npc.createCircleCollisionShape(0.25, 0, -0.25);
    
    // Stop from rotating on collision
    %npc.setCollisionCallback(true);

@@ -29,12 +29,15 @@ function Alpha::create( %this )
    createBackground();
    createMap();
    
-   createNPC("-20 0");
-   createPlayer("0 0");
+   createNPC("-4 -2");
+   createPlayer("0 -2");
+   
+   // Start sticking camera to player
+   centreOnSprite(Player);
 
    //  Debug
    //  Enable visualization for "collision", "position", and "aabb"
-   myScene.setDebugOn("collision", "position", "aabb");
+   //myScene.setDebugOn("collision", "position", "aabb");
 
    //  Disable visualization for "collision", "position", and "aabb"
    //myScene.setDebugOff("collision", "position", "aabb");

@@ -6,9 +6,10 @@
 <Breakpoints/>
 <Bookmarks/>
 <OpenFiles>
-<File ScrollX="0" ScrollY="12">modules\Alpha\2\main.cs</File>
-<File ScrollX="0" ScrollY="12">modules\Alpha\2\scripts\characters\npc.cs</File>
-<File ScrollX="0" ScrollY="12" Active="true">modules\Alpha\2\scripts\characters\player.cs</File>
-<File ScrollX="0" ScrollY="43">modules\Alpha\2\scripts\behaviours\movement\playerControls.cs</File>
+<File ScrollX="0" ScrollY="16">modules\Alpha\2\main.cs</File>
+<File ScrollX="0" ScrollY="6">modules\Alpha\2\scripts\characters\npc.cs</File>
+<File ScrollX="0" ScrollY="0">modules\Alpha\2\scripts\characters\player.cs</File>
+<File ScrollX="0" ScrollY="39">modules\Alpha\2\scripts\behaviours\movement\playerControls.cs</File>
+<File ScrollX="0" ScrollY="13" Active="true">modules\Alpha\2\scripts\scenewindow.cs</File>
 </OpenFiles>
 </TorsionProjectOptions>

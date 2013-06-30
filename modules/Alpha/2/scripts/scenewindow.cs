@@ -16,7 +16,7 @@ function createSceneWindow()
     //  These are the default values
     mySceneWindow.setCameraPosition(0, 0);
     mySceneWindow.setCameraSize(100, 75);
-    mySceneWindow.setCameraZoom(1);
+    mySceneWindow.setCameraZoom(5);
     mySceneWindow.setCameraAngle(0);
 }
 
@@ -28,4 +28,12 @@ function destroySceneWindow()
 
     //  Delete window
     mySceneWindow.delete();
+}
+
+function centreOnSprite(%sprite)
+{
+   mySceneWindow.setCameraPosition(%sprite.position);
+   
+   // Schedule to centre camera on player sprite
+   mySceneWindow.PositionSchedule = schedule(1, 0, centreOnSprite, %sprite);
 }

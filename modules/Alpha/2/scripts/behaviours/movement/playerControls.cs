@@ -13,8 +13,8 @@ if (!isObject(PlayerControlsBehaviour))
    %template.addBehaviorField(rightKey, "Key to bind to right movement", keybind, "keyboard right");
    
    // addBehaviorField(function name, description of function, type, value)
-   %template.addBehaviorField(xSpeed, "Speed when moving along the X axis; horizontal", float, 20.0);
-   %template.addBehaviorField(ySpeed, "Speed when moving along the Y axis; vertical", float, 20.0);
+   //%template.addBehaviorField(xSpeed, "Speed when moving along the X axis; horizontal", float, 2.0);
+   //%template.addBehaviorField(ySpeed, "Speed when moving along the Y axis; vertical", float, 2.0);
 }
 
 function PlayerControlsBehaviour::onBehaviorAdd(%this)
@@ -54,8 +54,8 @@ function PlayerControlsBehaviour::onBehaviorRemove(%this)
 
 function PlayerControlsBehaviour::updateMovement(%this)
 {
-   %this.owner.setLinearVelocityX((%this.right - %this.left) * %this.xSpeed);
-   %this.owner.setLinearVelocityY((%this.up - %this.down) * %this.ySpeed);
+   %this.owner.setLinearVelocityX((%this.right - %this.left) * %this.owner.speed);
+   %this.owner.setLinearVelocityY((%this.up - %this.down) * %this.owner.speed);
    
    // Stop rotation on collision
    //%this.owner.setCollisionCallback(true);

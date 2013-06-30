@@ -8,10 +8,10 @@ function createPlayer(%position)
 
    //  Centre on screen
    %player.position = %position;
-   %player.size = "8 8";
+   //%player.size = 1;
 
    //  On layer closest to camera
-   %player.sceneLayer = 1;
+   %player.sceneLayer = 14;
 
    //  Set animation
    //%player.image = "ToyAssets:TD_Wizard_CompSprite";
@@ -19,8 +19,9 @@ function createPlayer(%position)
    //%player.animation = "ToyAssets:TD_Wizard_WalkSouth";
    %player.animation = %player.imageName @ "South";
 
-   // Collision Box, if size not set = size of image
-   %player.createPolygonBoxCollisionShape();
+   // Collision Circle, if size not set = size of image
+   // (radius, [relative xPos, relative yPos])
+   %player.createCircleCollisionShape(0.25, 0, -0.25);
    
    %player.setCollisionCallback(true);
    %player.setFixedAngle(true);
@@ -28,6 +29,7 @@ function createPlayer(%position)
    //	Move Variables
    %player.xSpeed = 0;
    %player.ySpeed = 0;*/
+   %player.speed = 4;
 
    // Set Behaviours
    %controls = PlayerControlsBehaviour.createInstance();
